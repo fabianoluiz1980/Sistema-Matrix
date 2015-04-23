@@ -95,6 +95,8 @@ Partial Class Form6
         Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colTipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabOrdemServico = New System.Windows.Forms.TabControl()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ordValorTotal = New System.Windows.Forms.TextBox()
         Me.tabCadastraOrdem.SuspendLayout()
         Me.grpServico.SuspendLayout()
         Me.grpFuncionario.SuspendLayout()
@@ -106,6 +108,8 @@ Partial Class Form6
         '
         'tabCadastraOrdem
         '
+        Me.tabCadastraOrdem.Controls.Add(Me.ordValorTotal)
+        Me.tabCadastraOrdem.Controls.Add(Me.Label6)
         Me.tabCadastraOrdem.Controls.Add(Me.lblDescricaoOS)
         Me.tabCadastraOrdem.Controls.Add(Me.txtDescricaoOS)
         Me.tabCadastraOrdem.Controls.Add(Me.lblInserir)
@@ -140,7 +144,7 @@ Partial Class Form6
         '
         Me.lblDescricaoOS.AutoSize = True
         Me.lblDescricaoOS.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.lblDescricaoOS.Location = New System.Drawing.Point(311, 89)
+        Me.lblDescricaoOS.Location = New System.Drawing.Point(313, 4)
         Me.lblDescricaoOS.Name = "lblDescricaoOS"
         Me.lblDescricaoOS.Size = New System.Drawing.Size(170, 17)
         Me.lblDescricaoOS.TabIndex = 91
@@ -150,10 +154,10 @@ Partial Class Form6
         '
         Me.txtDescricaoOS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDescricaoOS.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtDescricaoOS.Location = New System.Drawing.Point(316, 119)
+        Me.txtDescricaoOS.Location = New System.Drawing.Point(316, 25)
         Me.txtDescricaoOS.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtDescricaoOS.Name = "txtDescricaoOS"
-        Me.txtDescricaoOS.Size = New System.Drawing.Size(490, 103)
+        Me.txtDescricaoOS.Size = New System.Drawing.Size(490, 144)
         Me.txtDescricaoOS.TabIndex = 90
         Me.txtDescricaoOS.TabStop = False
         Me.txtDescricaoOS.Text = ""
@@ -393,7 +397,7 @@ Partial Class Form6
         '
         Me.cboCodFuncionario.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.cboCodFuncionario.FormattingEnabled = True
-        Me.cboCodFuncionario.Location = New System.Drawing.Point(362, 17)
+        Me.cboCodFuncionario.Location = New System.Drawing.Point(360, 48)
         Me.cboCodFuncionario.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboCodFuncionario.Name = "cboCodFuncionario"
         Me.cboCodFuncionario.Size = New System.Drawing.Size(140, 25)
@@ -958,6 +962,27 @@ Partial Class Form6
         Me.tabOrdemServico.Size = New System.Drawing.Size(852, 862)
         Me.tabOrdemServico.TabIndex = 1
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.Label6.Location = New System.Drawing.Point(610, 199)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(77, 17)
+        Me.Label6.TabIndex = 92
+        Me.Label6.Text = "Valor Total"
+        '
+        'ordValorTotal
+        '
+        Me.ordValorTotal.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.ordValorTotal.Location = New System.Drawing.Point(693, 199)
+        Me.ordValorTotal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ordValorTotal.Name = "ordValorTotal"
+        Me.ordValorTotal.Size = New System.Drawing.Size(121, 23)
+        Me.ordValorTotal.TabIndex = 93
+        Me.ordValorTotal.TabStop = False
+        Me.ordValorTotal.Tag = "Auto"
+        '
         'Form6
         '
         Me.AcceptButton = Me.botCadastrar
@@ -967,7 +992,7 @@ Partial Class Form6
         Me.AutoScroll = True
         Me.AutoSize = True
         Me.CancelButton = Me.botLimpar
-        Me.ClientSize = New System.Drawing.Size(880, 684)
+        Me.ClientSize = New System.Drawing.Size(880, 683)
         Me.Controls.Add(Me.tabOrdemServico)
         Me.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -1064,4 +1089,6 @@ Partial Class Form6
     Friend WithEvents colCliente As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colStatus As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colTipo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents ordValorTotal As System.Windows.Forms.TextBox
 End Class
